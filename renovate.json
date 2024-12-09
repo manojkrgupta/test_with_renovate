@@ -5,5 +5,19 @@
   ],
   "kubernetes": {
     "fileMatch": ["\\.yml$"]
-  }
+  },
+ "hostRules": [
+    {
+      "hostType": "docker",
+      "matchHost": "cgr.dev",
+      "username": "f1d5337370e7d8e99282c25286804a5b2cfc1682/729dfe43b539980b", // process.env.CGR_USERNAME,
+      "password": "eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJodHRwczovL2lzc3Vlci5lbmZvcmNlLmRldiIsImV4cCI6MTczNjMyMDE0NCwiaWF0IjoxNzMzNzI4MTQ0LCJpc3MiOiJodHRwczovL3B1bGx0b2tlbi5pc3N1ZXIuY2hhaW5ndWFyZC5kZXYiLCJzdWIiOiJwdWxsLXRva2VuLTU0YWE0YmU4ZjA2MDJlM2MwNjliMjIyYzg1MTczN2ExYTViMDM3MmYifQ.kGDwZEf3Lv2wXF0t6J0vtjbF98Hh7Ui1p_hit9e3XIdWHr_OA17bmHUGY1SXXFprNndC5m5uGSYumv8ymAO2d5-SGQaMbrU-cxMTn0PR1QZe564UAPOB01HfSewX2WPBrx_m0iV_BIFRX6U-wmcY16rBUEXSof_Ovprni09g9Ph-uPXp8_Z_xhu2xnZ_R1EbyS9vNjlTADF3ed10eAVGr56URb-EOzpuU_xqeKATE6_X9HJ3LzvK3fffExKHpnEh_vr476oHvlIO1cGIhm7tyw1pFTfXpFq-kjhmbRdy0d_e9I47XGOEm7HU0W5zf6ltr8vJaek0eQaRwtg7nZ1gFVIcrpV9e2ABa3qpZai71bpuK4MAOam2ASkyJu5EVWPLWepWXvLoCF-RBEKifcTb-_8D5M2vFNgOvzKM9DQIwGZEbVkjtrvXII1l3G2s3dJIFzlI5ioCpjOB4WS766pnCNe5rxVJTmIBKT9VoAapXkleF19-jC4dNAFkR6iOvyw0k0PTCUcVlNZXzSLOUHNVAW8KwN-eKbzPV4Yo7Evk82cfTOwJuNjdhgl_LMMt_gZxxY0VOBaNBuIhI5B3EKyEPAv2zREhpaHIVV_rGfU9ItRTO8X7p_m585KfbDL-qApJzmA91GOSyMZ_UDDzVdbjVK_SyPYSM5V5LD-HEhLmSfc" // process.env.CGR_PASSWORD
+     }],
+ "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["cgr.dev/manojgupta.in/jdk-non-unique"],
+      "versioning": "regex:^openjdk-(?<major>\\d{1,2}).*$", // cgr.dev/manojgupta.in/jdk-non-unique:openjdk-14 cgr.dev/manojgupta.in/jdk-non-unique:openjdk-8-dev cgr.dev/manojgupta.in/jdk-non-unique:openjdk-8
+      "registryUrls": ["https://cgr.dev"]
+    }
 }
