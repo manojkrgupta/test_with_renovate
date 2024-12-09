@@ -17,7 +17,7 @@
     {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["cgr.dev/manojgupta.in/jdk-non-unique"],
-      "versioning": "regex:^openjdk-(?<major>\\d{1,2}).*$", // cgr.dev/manojgupta.in/jdk-non-unique:openjdk-14 cgr.dev/manojgupta.in/jdk-non-unique:openjdk-8-dev cgr.dev/manojgupta.in/jdk-non-unique:openjdk-8
+      "versioning": "regex:^openjdk-(?<major>\\d{1,2}).*$",
       "registryUrls": ["https://cgr.dev"]
     }
 }
