@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: jdk
-        image: cgr.dev/manojgupta.in/jdk-non-unique:openjdk-8
+        image: cgr.dev/manojgupta.in/jdk-non-unique:openjdk-24-r2-ea
         ports:
         - containerPort: 80
