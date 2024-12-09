@@ -20,4 +20,5 @@
       "versioning": "regex:^openjdk-(?<major>\\d{1,2}).*$",
       "registryUrls": ["https://cgr.dev"]
     }
+ ]
 }
